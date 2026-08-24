@@ -1,0 +1,58 @@
+# Python virtual environment
+venv/
+.venv/
+ 
+# Python cache
+__pycache__/
+*.pyc
+ 
+# VS Code
+.vscode/
+ 
+# ChromaDB
+chroma/
+chroma_db/
+ 
+# SQLite-databaser
+*.sqlite3
+ 
+# Jupyter Notebook
+.ipynb_checkpoints/
+ 
+# Loggfiler
+*.log
+ 
+# Midlertidige filer
+*.tmp
+*.bak
+ 
+# dbt-genererte filer
+target/
+logs/
+dbt.log
+# Midlertidige testscript
+1021M*-gemini-code-oppdatert.py
+gemini-code-*.py
+ 
+script.py
+script0.py
+script1.py
+script2.py
+ 
+x.py
+xx.py
+xcxc.py
+zxzxz.py
+zzz.py
+ 
+tmp_script
+ 
+# Mapper som ikke skal til GitHub
+GEM_my_project/
+SJJK/
+temp/
+BACKUP/
+my_dbt_project/
+dbt-project/
+project/
+models/
