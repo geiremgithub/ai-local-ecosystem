@@ -34,11 +34,6 @@ dbt.log
 1021M*-gemini-code-oppdatert.py
 gemini-code-*.py
  
-script.py
-script0.py
-script1.py
-script2.py
- 
 x.py
 xx.py
 xcxc.py
@@ -56,3 +51,4 @@ my_dbt_project/
 dbt-project/
 project/
 models/
+scratch/
