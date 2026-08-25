@@ -46,6 +46,7 @@ tmp_script
 GEM_my_project/
 SJJK/
 temp/
+tmp/
 BACKUP/
 my_dbt_project/
 dbt-project/
