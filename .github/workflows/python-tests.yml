@@ -1,0 +1,30 @@
+name: Python på Windows
+ 
+on:
+push:
+pull_request:
+ 
+jobs:
+test-python:
+ 
+runs-on: windows-latest
+ 
+steps:
+ 
+- name: Hent kode fra repository
+uses: actions/checkout@v4
+ 
+- name: Installer Python
+uses: actions/setup-python@v5
+with:
+python-version: "3.12"
+ 
+- name: Vis Python-versjon
+run: python --version
+ 
+- name: Vis innhold i repository
+run: dir
+ 
+- name: Kjør Python-kode
+run: |
+python -c "print('Hei fra GitHub Actions på Windows!')"

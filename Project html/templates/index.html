@@ -86,6 +86,20 @@
     background: #EEF2F7;
   }
 
+  .temp-kontroll {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #f9f9f6;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--linje);
+    border-radius: var(--radius);
+  }
+
+  .temp-kontroll input[type="range"] {
+    width: 70px;
+  }
+
   .diagram-panel {
     border-bottom: 1px solid var(--linje);
     background: var(--panel);
@@ -272,6 +286,12 @@
   <div class="modus-velger">
     <button type="button" id="diagram-knapp" class="info-knapp">Slik fungerer det ⓘ</button>
     <button type="button" id="nullstill-knapp" class="info-knapp">Nullstill samtale</button>
+    
+    <div class="temp-kontroll" title="Juster temperatur for humørmodus">
+      <label for="temperatur-slider">Temp: <span id="temp-verdi">0.7</span></label>
+      <input type="range" id="temperatur-slider" min="0.0" max="1.0" step="0.1" value="0.7" oninput="document.getElementById('temp-verdi').innerText = this.value">
+    </div>
+
     <label for="modus">Tone:</label>
     <select id="modus">
       {% for m in moduser %}
@@ -321,6 +341,7 @@
   const sporsmalFelt = document.getElementById("sporsmal");
   const sendKnapp = document.getElementById("send-knapp");
   const modusVelger = document.getElementById("modus");
+  const temperaturSlider = document.getElementById("temperatur-slider");
 
   function leggTilBrukerMelding(tekst) {
     const div = document.createElement("div");
@@ -394,6 +415,9 @@
     const sporsmal = sporsmalFelt.value.trim();
     if (!sporsmal) return;
 
+    const valgtModus = modusVelger.value;
+    const valgtTemp = parseFloat(temperaturSlider.value);
+
     leggTilBrukerMelding(sporsmal);
     sporsmalFelt.value = "";
     sendKnapp.disabled = true;
@@ -403,7 +427,11 @@
       const respons = await fetch("/api/sporsmal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sporsmal: sporsmal, modus: modusVelger.value }),
+        body: JSON.stringify({ 
+          sporsmal: sporsmal, 
+          modus: valgtModus,
+          temperatur: valgtTemp
+        }),
       });
       const data = await respons.json();
       leggTilSvar(data);
