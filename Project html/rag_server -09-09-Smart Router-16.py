@@ -1,3 +1,17 @@
+# ============================================================
+# GEM 10 septemeber 2026
+# ============================================================
+
+# ============================================================
+# STANDARDBIBLIOTEKER
+#
+# Hensikt:
+# Laster inn Python-biblioteker som brukes til
+# filhåndtering, tekstbehandling, systemfunksjoner,
+# tidsmåling og kjøring av bakgrunnsprosesser.
+#
+# ============================================================
+
 import os
 import re
 import sys
@@ -5,6 +19,14 @@ import warnings
 import time
 import shutil
 from threading import Thread, Event
+# Thread:
+# Kjører oppgaver parallelt i bakgrunnen, for eksempel
+# mappeovervåking mens webserveren kjører.
+#
+# Event:
+# Brukes til synkronisering mellom tråder, slik at
+# programmet kan vente til en oppgave er ferdig før
+# neste steg starter
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -2429,6 +2451,7 @@ def api_sporsmal():
 # tom samtale uten å måtte laste siden på nytt.
 #
 # ============================================================
+
 @app.route(
     "/api/nullstill",
     methods=["POST"]
