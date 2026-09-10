@@ -19,7 +19,7 @@ print(f"[System] Kjører skriptversjon: {SKRIPT_VERSJON}")
 
 
 # ============================================================
-# MASKINVARE
+# MASKINVARE - 
 # ============================================================
 
 if torch.cuda.is_available():
