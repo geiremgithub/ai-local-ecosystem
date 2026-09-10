@@ -1,7 +1,7 @@
 # ============================================================
-# GEM 10 septemeber 2026
+# GEM. 10 septemeber 2026. 13:52 release
 # ============================================================
-
+# 
 # ============================================================
 # STANDARDBIBLIOTEKER
 #
@@ -12,14 +12,17 @@
 #
 # ============================================================
 
-import os
-import re
-import sys
-import warnings
-import time
-import shutil
+import os # Arbeider med filer, mapper og filstier.
+import re # Brukes til søk og behandling av tekst med regulære uttrykk.
+import sys # Gir tilgang til Python-miljøet og systeminnstillinger.
+import warnings # Brukes til å vise eller skjule advarsler.
+import time # Måler tid og håndterer pauser i programmet.
+import shutil # Kopierer, flytter og sletter filer og mapper.
+
 from threading import Thread, Event
+
 # Thread:
+# Thread = kjør kode i bakgrunnen
 # Kjører oppgaver parallelt i bakgrunnen, for eksempel
 # mappeovervåking mens webserveren kjører.
 #
@@ -27,6 +30,7 @@ from threading import Thread, Event
 # Brukes til synkronisering mellom tråder, slik at
 # programmet kan vente til en oppgave er ferdig før
 # neste steg starter
+# Event = vent på at en oppgave skal bli ferdig
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -38,7 +42,6 @@ import torch
 SKRIPT_VERSJON = "v54-web - viser relevante chunks ved hvert søk"
 
 print(f"[System] Kjører skriptversjon: {SKRIPT_VERSJON}")
-
 
 # ============================================================
 # MASKINVARE
