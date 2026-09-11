@@ -1,55 +1,58 @@
-# Python virtual environment
+# Ignorer alt
+*
+
+# Behold git-filer
+!.gitignore
+!.github/
+!.github/**
+
+# Behold dokumenter
+!dokumenter/
+!dokumenter/**
+
+# Behold Project html
+!Project html/
+!Project html/**
+!sensitiv/
+!sensitiv/**
+
+# Men ignorer lokale arkiver
+Project html/SCRIPT/
+Project html/bckup/
+
+# Python virtual environments
 venv/
 .venv/
- 
+
 # Python cache
 __pycache__/
 *.pyc
- 
+
 # VS Code
 .vscode/
- 
+tempCodeRunnerFile.*
+
 # ChromaDB
 chroma/
 chroma_db/
- 
-# SQLite-databaser
+
+# SQLite
 *.sqlite3
- 
-# Jupyter Notebook
-.ipynb_checkpoints/
- 
+
 # Loggfiler
 *.log
- 
+
 # Midlertidige filer
 *.tmp
 *.bak
- 
-# dbt-genererte filer
-target/
-logs/
-dbt.log
-# Midlertidige testscript
-1021M*-gemini-code-oppdatert.py
-gemini-code-*.py
- 
-x.py
-xx.py
-xcxc.py
-zxzxz.py
-zzz.py
- 
-tmp_script
- 
-# Mapper som ikke skal til GitHub
-GEM_my_project/
-SJJK/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Lokale arkiver
+BACKUP/
+
+# Midlertidige mapper
 temp/
 tmp/
-BACKUP/
-my_dbt_project/
-dbt-project/
-project/
-models/
 scratch/
