@@ -1,7 +1,0 @@
-﻿flask
-torch
-transformers
-chromadb
-sentence-transformers
-watchdog
-langchain-text-splitters
