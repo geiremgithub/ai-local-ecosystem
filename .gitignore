@@ -54,4 +54,15 @@ project/
 models/
 scratch/
 Project html/SCRIPT/
+# Lokale arkiver
+Project html/SCRIPT/
+Project html/bckup/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+tempCodeRunnerFile.*
 
