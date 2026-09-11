@@ -1,14 +1,34 @@
-# Python
+# Ignorer alt
+*
+
+# Behold git-filer
+!.gitignore
+!.github/
+!.github/**
+
+# Behold dokumenter
+!dokumenter/
+!dokumenter/**
+
+# Behold Project html
+!Project html/
+!Project html/**
+
+# Men ignorer lokale arkiver
+Project html/SCRIPT/
+Project html/bckup/
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
 
 # VS Code
 .vscode/
 tempCodeRunnerFile.*
-
-# Virtuelle miljøer
-venv/
-.venv/
 
 # ChromaDB
 chroma/
@@ -17,7 +37,7 @@ chroma_db/
 # SQLite
 *.sqlite3
 
-# Logger
+# Loggfiler
 *.log
 
 # Midlertidige filer
@@ -28,8 +48,6 @@ chroma_db/
 .ipynb_checkpoints/
 
 # Lokale arkiver
-Project html/SCRIPT/
-Project html/bckup/
 BACKUP/
 
 # Midlertidige mapper
